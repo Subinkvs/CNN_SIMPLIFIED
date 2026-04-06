@@ -4,7 +4,8 @@ import cv2
 image_path = 'image_path/white_board.jpg'
 
 image = cv2.imread(image_path)
-resize_image = cv2.resize(image, (600, 700))
+print(image.shape)
+resize_image = cv2.resize(image, (600, 700))   #(width, height)
 
 
 """
@@ -43,7 +44,7 @@ resize_image : ndarray
     Thickness of the rectangle border.
     Use -1 to fill the rectangle.
 """
-cv2.rectangle(resize_image, (200, 350), (450, 600), (0, 0, 255), 5)
+cv2.rectangle(resize_image, (200, 350), (450, 600), (0, 0, 255), 2)
 
 
 """
@@ -63,7 +64,7 @@ resize_image : ndarray
     Thickness of the circle boundary.
     Use -1 to draw a filled circle.
 """
-cv2.circle(resize_image, (300, 150), 100, (255, 0, 0), 10)
+cv2.circle(resize_image, (300, 150), 50, (255, 0, 0), 10)
 
 
 
